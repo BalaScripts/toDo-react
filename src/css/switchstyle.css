@@ -1,0 +1,72 @@
+/* Switch Component Style Sheet */
+
+.switch-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 5px black;
+}
+
+.switch-input:checked + .switch-label {
+  background-color: #5a5959;
+}
+
+.switch-label::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(to right, orange, yellow);
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.switch-input:checked + .switch-label::after {
+  background: linear-gradient(to right, #f6f6f6, #1a1a1a);
+  transform: translateX(28px);
+}
+
+.switch-sun-icon,
+.switch-moon-icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  fill: rgb(184, 183, 183);
+  transition: opacity 0.3s;
+}
+
+.switch-sun-icon {
+  left: 6px;
+}
+
+.switch-moon-icon {
+  right: 6px;
+  opacity: 0.6;
+}
+
+.switch-input:checked + .switch-label .switch-sun-icon {
+  opacity: 0.9;
+  fill: orange;
+}
+
+.switch-input:checked + .switch-label .switch-moon-icon {
+  opacity: 0.8;
+  fill: black !important;
+}
