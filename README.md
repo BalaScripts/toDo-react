@@ -89,6 +89,14 @@ To run this project locally, follow these steps:
    ```bash
    npm run deploy
    ```
+   
+## Login
+username:test,
+password:test,
+
+## ADD NEW TASK
+task name
+task status(todo, pending, completed)
 
 ## Usage
 
